@@ -4,6 +4,30 @@
 
 @import './bootswatch';
 
+$custom_blue : rgb(2, 146, 146);
+$custom_red : rgb(192, 52, 52);
+$first_letter_red : rgb(209, 60, 60);
+
+.navbar-brand {
+    color:  $custom_red !important;
+    font-size: 1.7rem;
+    &::first-letter {
+      font-size: 1.85rem;
+      color: $first_letter_red;
+    }
+    span {
+      color: $custom_blue;
+    }
+}
+.navbar {
+  border: none;
+  .nav-link {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Main */
 
 
 .browserupgrade {
@@ -30,9 +54,10 @@ body {
 /* Custom page header */
 .header {
   padding-bottom: 1rem;
-  border-bottom: .05rem solid #e5e5e5;
+  border-bottom: .1rem solid $custom_blue;
   .nav-link {
     margin: 0 .1rem;
+    color: #ccc;
   }
 }
 
@@ -48,13 +73,27 @@ body {
 .footer {
   padding-top: 1.5rem;
   color: #777;
-  border-top: .05rem solid #e5e5e5;
+  border-top: .1rem solid $custom_blue;
+  .heart{ 
+    color: $custom_red;
+    font-size: 2rem;
+    margin-right: .5rem;
+    position: relative;
+    top: .1rem;
+  }
+  .dev {
+    display: inline-block;
+    color: $custom_blue;
+    &::first-letter{
+      color: $first_letter_red;
+    }
+  }
 }
 
 /* Customize container */
 @media (min-width: 48em) {
   .container {
-    max-width: 46rem;
+    max-width: 67rem;
   }
 }
 .container-narrow > hr {
@@ -64,7 +103,7 @@ body {
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  border-bottom: .05rem solid #e5e5e5;
+  border-bottom: .1rem solid #e5e5e5;
 }
 .jumbotron .btn {
   padding: .75rem 1.5rem;
