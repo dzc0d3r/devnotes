@@ -83,6 +83,7 @@ body {
   }
   .dev {
     display: inline-block;
+    margin-left: .5rem;
     color: $custom_blue;
     &::first-letter{
       color: $first_letter_red;
