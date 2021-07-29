@@ -26,42 +26,9 @@ $first_letter_red : rgb(209, 60, 60);
   }
 }
 
+
 /* Main */
-.display-4 {
-  font-size: 3rem;
-}
 
-.card {
-  margin-top: .5rem;
-  .card-header {
-    border-bottom: none;
-  }
-
-}
-
-@media only screen and (max-width : 732px) {
-  
-  .display-4 {
-    font-size: 2rem ;
-    
-  }
-  h4 {
-    font-size: 1.2rem;
-  }
-
-}
-
-@media only screen and (max-width : 480px) {
-  
-  .display-4 {
-    font-size: 2rem ;
-    
-  }
-  h4 {
-    font-size: 1.2rem;
-  }
-
-}
 
 .browserupgrade {
   margin: 0.2em 0;

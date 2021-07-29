@@ -22,7 +22,7 @@ const isDev = !isProd && !isTest;
 
 /** add views task : using pug */
 function views() {
-  return src('app/**/*.pug')
+  return src('app/*.pug')
     .pipe($.plumber())
     .pipe($.pug({ pretty: true }))
     .pipe(dest('.tmp'))
@@ -105,7 +105,7 @@ function lintTest() {
 };
 
 function html() {
-  return src(['app/**/*.html', '.tmp/**/*.html'])
+  return src(['app/*.html', '.tmp/*.html'])
     .pipe($.useref({ searchPath: ['.tmp', 'app', '.'] }))
     .pipe($.if(/\.js$/, $.uglify({ compress: { drop_console: true } })))
     .pipe($.if(/\.css$/, $.postcss([cssnano({ safe: true, autoprefixer: false })])))
