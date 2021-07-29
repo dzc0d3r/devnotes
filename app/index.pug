@@ -4,22 +4,58 @@ extends layouts/default
 
 
 
+
+
 block content
   include layouts/includes/nav
   main.container
-    h5.text-center.text-muted.display-4.mt-4 Just My Personal Dev Notes
-      
+    h5.text-center.text-muted.display-4.my-4 Just My Personal Dev Notes
 
-  .row.marketing
-    .col-lg-6
-      h4 HTML5 Boilerplate
-      p HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+    .wrap
+      #accordion 
+        .card.flex
+          .card-header.bg-dark
+            a.card-link(data-toggle='collapse', href='#collapseOne')
+               h4.text-muted The History of the web
+          #collapseOne.collapse.hide(data-parent='#accordion')
+            .card-body
+              p Lorem ipsum..
+              a.btn.btn-secondary(href="web-and-browsers.html") Go somewhere
+        .card 
+          .card-header.bg-dark 
+            a.card-link(data-toggle='collapse', href='#collapseTwo')
+               h4.text-muted Front-End web developement
+          #collapseTwo.collapse.hide(data-parent='#accordion')
+            .card-body
+              | Lorem ipsum..
+        .card 
+          .card-header.bg-dark 
+            a.card-link(data-toggle='collapse', href='#collapseThree')
+               h4.text-muted Back-End web developement
+          #collapseThree.collapse.hide(data-parent='#accordion')
+            .card-body
+              | Lorem ipsum..
+        .card 
+          .card-header.bg-dark 
+            a.card-link(data-toggle='collapse', href='#collapseFour')
+               h4.text-muted SOLID Design principles
+          #collapseFour.collapse.hide(data-parent='#accordion')
+            .card-body
+              | Lorem ipsum..
+        .card 
+          .card-header.bg-dark 
+            a.card-link(data-toggle='collapse', href='#collapseFive')
+               h4.text-muted Algorithms and Data structures
+          #collapseFive.collapse.hide(data-parent='#accordion')
+            .card-body
+              | Lorem ipsum..
+        .card 
+          .card-header.bg-dark 
+            a.card-link(data-toggle='collapse', href='#collapseSix')
+               h4.text-muted Design Patterns
+          #collapseSix.collapse.hide(data-parent='#accordion')
+            .card-body
+              | Lorem ipsum..
 
-      h4 Sass
-      p Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
 
-      <h4>Bootstrap</h4>
-      <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
 
-      h4 Modernizr
-      p Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.
